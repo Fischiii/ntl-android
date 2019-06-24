@@ -6,6 +6,8 @@
 #include <NTL/lzz_p.h>
 #include <NTL/vec_lzz_p.h>
 #include <NTL/Lazy.h>
+#include <NTL/SmartPtr.h>
+#include <NTL/mat_lzz_p.h>
 
 NTL_OPEN_NNS
 
@@ -85,8 +87,6 @@ explicit zz_pX(zz_p a) { *this = a; }
 
 zz_pX(INIT_SIZE_TYPE, long n) { rep.SetMaxLength(n); }
 
-zz_pX(const zz_pX& a) : rep(a.rep) { }
-// initial value is a
 
 inline zz_pX(long i, zz_p c);
 inline zz_pX(long i, long c);
@@ -95,13 +95,12 @@ inline zz_pX(INIT_MONO_TYPE, long i, zz_p c);
 inline zz_pX(INIT_MONO_TYPE, long i, long c);
 inline zz_pX(INIT_MONO_TYPE, long i);
 
-zz_pX& operator=(const zz_pX& a) 
-   { rep = a.rep; return *this; }
 
 inline zz_pX& operator=(long a);
 inline zz_pX& operator=(zz_p a);
 
-~zz_pX() { }
+// default copy constructor and assignment
+// default destructor
 
 void normalize();
 // strip leading zeros
@@ -136,6 +135,9 @@ static const zz_pX& zero();
 zz_pX(zz_pX& x, INIT_TRANS_TYPE) : rep(x.rep, INIT_TRANS) { }
 
 };
+
+
+NTL_DECLARE_RELOCATABLE((zz_pX*))
 
 
 
@@ -865,6 +867,9 @@ public:
 };
 
 
+NTL_DECLARE_RELOCATABLE((zz_pXModulus*))
+
+
 inline long deg(const zz_pXModulus& F) { return F.n; }
 
 void build(zz_pXModulus& F, const zz_pX& f);
@@ -1093,7 +1098,9 @@ struct zz_pXArgument {
    vec_zz_pX H;
 };
 
-NTL_THREAD_LOCAL extern long zz_pXArgBound;
+extern 
+NTL_CHEAP_THREAD_LOCAL 
+long zz_pXArgBound;
 
 
 void build(zz_pXArgument& H, const zz_pX& h, const zz_pXModulus& F, long m);
@@ -1106,6 +1113,28 @@ void CompMod(zz_pX& x, const zz_pX& g, const zz_pXArgument& H,
 inline zz_pX
 CompMod(const zz_pX& g, const zz_pXArgument& H, const zz_pXModulus& F)
    { zz_pX x; CompMod(x, g, H, F); NTL_OPT_RETURN(zz_pX, x); }
+
+
+// New alternative CompMod strategy that just reduces to 
+// matrix multiplication ... 
+
+
+struct zz_pXNewArgument {
+   Mat<zz_p> mat;
+   zz_pX     poly;
+};
+
+void build(zz_pXNewArgument& H, const zz_pX& h, const zz_pXModulus& F, long m);
+void CompMod(zz_pX& x, const zz_pX& g, const zz_pXNewArgument& H,
+             const zz_pXModulus& F);
+void reduce(zz_pXNewArgument& H, const zz_pXModulus& F);
+
+void ProjectPowers(vec_zz_p& x, const vec_zz_p& a, long k,
+                   const zz_pXNewArgument& H, const zz_pXModulus& F);
+
+
+
+
 
 
 

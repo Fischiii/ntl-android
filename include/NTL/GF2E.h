@@ -32,8 +32,11 @@ public:
    Lazy<ZZ> _card;
 };
 
-NTL_THREAD_LOCAL
-extern SmartPtr<GF2EInfoT> GF2EInfo; // info for current modulus, initially null
+extern 
+NTL_CHEAP_THREAD_LOCAL
+GF2EInfoT *GF2EInfo; 
+// info for current modulus, initially null
+// fast TLS access
 
 
 
@@ -110,7 +113,6 @@ GF2X _GF2E__rep;
 // ****** constructors and assignment
 
 GF2E() {  } // NO_ALLOC
-GF2E(const GF2E& a)  {  _GF2E__rep = a._GF2E__rep; } // NO_ALLOC
 
 explicit GF2E(long a) { *this = a;  } // NO_ALLOC
 explicit GF2E(GF2 a) { *this = a;  } // NO_ALLOC
@@ -121,9 +123,6 @@ GF2E(INIT_NO_ALLOC_TYPE) { }  // allocates no space
 GF2E(INIT_ALLOC_TYPE) { _GF2E__rep.xrep.SetMaxLength(GF2E::WordLength());  }  // allocates space
 void allocate() { _GF2E__rep.xrep.SetMaxLength(GF2E::WordLength()); }
 
-~GF2E() { } 
-
-GF2E& operator=(const GF2E& a) { _GF2E__rep = a._GF2E__rep; return *this; }
 
 inline GF2E& operator=(long a);
 inline GF2E& operator=(GF2 a);
@@ -154,6 +153,10 @@ static void init(const GF2X& NewP);
 
 
 };
+
+
+
+NTL_DECLARE_RELOCATABLE((GF2E*))
 
 
 

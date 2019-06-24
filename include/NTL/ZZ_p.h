@@ -41,6 +41,14 @@ public:
 };
 
 
+#ifndef NTL_WIZARD_HACK
+
+class MatPrime_crt_helper;
+void MatPrime_crt_helper_deleter(MatPrime_crt_helper*);
+
+#endif
+
+
 class ZZ_pInfoT {
 private:
    ZZ_pInfoT();                       // disabled
@@ -54,6 +62,18 @@ public:
    long ExtendedModulusSize;
 
    Lazy<ZZ_pFFTInfoT> FFTInfo;
+
+#ifndef NTL_WIZARD_HACK
+
+   struct MatPrime_crt_helper_deleter_policy {
+      static void deleter(MatPrime_crt_helper *p) { MatPrime_crt_helper_deleter(p); }
+   };
+
+
+   Lazy<MatPrime_crt_helper,MatPrime_crt_helper_deleter_policy> MatPrime_crt_helper_info;
+   // PIMPL 
+
+#endif
 
 };
 
@@ -71,16 +91,22 @@ public:
   ZZ_TmpVecAdapter rem_tmp_vec;
 };
 
-NTL_THREAD_LOCAL
-extern SmartPtr<ZZ_pInfoT> ZZ_pInfo; 
+
+extern 
+NTL_CHEAP_THREAD_LOCAL
+ZZ_pInfoT *ZZ_pInfo; 
 // info for current modulus, initially null
+// plain pointer for faster TLS access
 
-NTL_THREAD_LOCAL
-extern SmartPtr<ZZ_pTmpSpaceT> ZZ_pTmpSpace;  
+extern 
+NTL_CHEAP_THREAD_LOCAL
+ZZ_pTmpSpaceT *ZZ_pTmpSpace;  
 // space for temps associated with current modulus, 
+// plain pointer for faster TLS access
 
-NTL_THREAD_LOCAL
-extern bool ZZ_pInstalled;
+extern 
+NTL_CHEAP_THREAD_LOCAL
+bool ZZ_pInstalled;
 // flag indicating if current modulus is fully installed
 
 
@@ -97,7 +123,7 @@ explicit ZZ_pContext(const ZZ& p) : ptr(MakeSmart<ZZ_pInfoT>(p)) { }
 
 // copy constructor, assignment, destructor: default
 
-void save() { ptr = ZZ_pInfo; }
+void save();
 void restore() const;
 
 };
@@ -159,7 +185,9 @@ static void init(const ZZ&);
 
 typedef void (*DivHandlerPtr)(const ZZ_p& a);   // error-handler for division
 
-NTL_THREAD_LOCAL static DivHandlerPtr DivHandler;
+static 
+NTL_CHEAP_THREAD_LOCAL 
+DivHandlerPtr DivHandler;
 
 
 // ****** constructors and assignment
@@ -167,14 +195,11 @@ NTL_THREAD_LOCAL static DivHandlerPtr DivHandler;
 ZZ_p() { } // NO_ALLOC
 explicit ZZ_p(long a) { *this = a; }
 
-ZZ_p(const ZZ_p& a) { _ZZ_p__rep = a._ZZ_p__rep; } // NO_ALLOC
-
 ZZ_p(INIT_NO_ALLOC_TYPE) { }  // allocates no space
 ZZ_p(INIT_ALLOC_TYPE) { _ZZ_p__rep.SetSize(ZZ_pInfo->size); }  // allocates space
 
 ~ZZ_p() { } 
 
-ZZ_p& operator=(const ZZ_p& a) { _ZZ_p__rep = a._ZZ_p__rep; return *this; }
 
 inline ZZ_p& operator=(long a);
 
@@ -210,7 +235,7 @@ static const ZZ_pFFTInfoT* GetFFTInfo()
 static ZZ_pTmpSpaceT* GetTmpSpace()
 {
    install();
-   return ZZ_pTmpSpace.get();
+   return ZZ_pTmpSpace;
 }
 
 
@@ -238,6 +263,10 @@ void KillBig() { _ZZ_p__rep.KillBig(); }
 
 
 };
+
+
+
+NTL_DECLARE_RELOCATABLE((ZZ_p*))
 
 
 
@@ -525,7 +554,7 @@ public:
    ~ZZ_pWatcher() { watched.KillBig(); }
 };
 
-#define NTL_ZZ_pRegister(x) NTL_THREAD_LOCAL static ZZ_p x; ZZ_pWatcher _WATCHER__ ## x(x); x.allocate()
+#define NTL_ZZ_pRegister(x) NTL_TLS_LOCAL(ZZ_p, x); ZZ_pWatcher _WATCHER__ ## x(x); x.allocate()
 
 // FIXME: register variables that are allocated with respect to one modulus
 // and then reused with another modulus may have initial values that are

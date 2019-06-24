@@ -1,0 +1,45 @@
+
+# invoked as: sh MakeCheckFeatures "$(FEATURES)" "$(LINK)" "$(LDLIBS)"
+
+PHONE_TMP_DIR=$4
+TOOLCHAIN_DIR=$5
+TOOLCHAIN_PREFIX=$6
+GMP_LIBDIR=$7
+echo "Executing MakeCheckFeatures: $PHONE_TMP_DIR"
+for f in $1
+do
+
+   printf '*** Checking for feature: %s ' "$f"
+
+   echo "" > "../include/NTL/HAVE_$f.h"
+
+   sh RemoveProg CheckFeatures
+   adb shell rm -r $PHONE_TMP_DIR
+   echo $2 Check$f.cpp -o CheckFeatures $3 >> "CheckFeatures.log" 2>&1
+   $2 Check$f.cpp -o CheckFeatures $3 >> "CheckFeatures.log" 2>&1
+
+   if test -f CheckFeatures
+   then
+    adb shell mkdir -p $PHONE_TMP_DIR
+    adb push CheckFeatures $PHONE_TMP_DIR/CheckFeatures
+    adb push $TOOLCHAIN_DIR/$TOOLCHAIN_PREFIX/$TOOLCHAIN_PREFIX/lib/libc++_shared.so $PHONE_TMP_DIR
+    adb push $GMP_LIBDIR/libgmp.so $PHONE_TMP_DIR
+    CHECK_RESULT=$(adb shell "export LD_LIBRARY_PATH=$PHONE_TMP_DIR && cd $PHONE_TMP_DIR && $PHONE_TMP_DIR/CheckFeatures")
+      if $CHECK_RESULT
+      then
+	 echo "HAVE_$f [yes]"
+	 echo "#ifndef NTL_HAVE_$f" >  "../include/NTL/HAVE_$f.h"
+	 echo "#define NTL_HAVE_$f" >> "../include/NTL/HAVE_$f.h"
+	 echo "#endif"              >> "../include/NTL/HAVE_$f.h"
+	 sh RemoveProg CheckFeatures
+      else
+	 echo "[no]"
+      fi
+   else
+      echo "[no]"
+   fi
+
+done
+
+exit 0
+

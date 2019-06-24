@@ -1,15 +1,20 @@
+MAKE_PROG="$1"
+
+echo
+echo "---------------------------------"
+echo "making ZZTest"
+$MAKE_PROG ZZTest
+echo "running ZZTest"
+./ZZTest
+sh RemoveProg ZZTest
 
 echo
 echo "---------------------------------"
 echo "making CanZassTest"
-make CanZassTest
+$MAKE_PROG CanZassTest
 echo "running CanZassTest"
-adb push CanZassTest $1/
-adb push CanZassTestIn $1/
-adb shell $1/CanZassTest "$1/CanZassTestIn" "$1/XXX"
-adb pull $1/XXX
+./CanZassTest < CanZassTestIn > XXX
 sh RemoveProg CanZassTest
-sh AndroidRemoveProg $1/CanZassTest $1/CanZassTestIn
 if diff -b XXX CanZassTestOut
 then
 echo "CanZassTest OK"
@@ -20,14 +25,10 @@ fi
 echo
 echo "---------------------------------"
 echo "making BerlekampTest"
-make BerlekampTest
+$MAKE_PROG BerlekampTest
 echo "running BerlekampTest"
-adb push BerlekampTest $1/
-adb push BerlekampTestIn $1/
-adb shell $1/BerlekampTest "$1/BerlekampTestIn" "$1/XXX"
-adb pull $1/XXX
+./BerlekampTest < BerlekampTestIn > XXX
 sh RemoveProg BerlekampTest
-sh AndroidRemoveProg $1/BerlekampTest $1/BerlekampTestIn
 if diff -b XXX BerlekampTestOut
 then
 echo "BerlekampTest OK"
@@ -39,14 +40,10 @@ fi
 echo
 echo "---------------------------------"
 echo "making ZZXFacTest"
-make ZZXFacTest
+$MAKE_PROG ZZXFacTest
 echo "running ZZXFacTest"
-adb push ZZXFacTest $1/
-adb push ZZXFacTestIn $1/
-adb shell $1/ZZXFacTest "$1/ZZXFacTestIn" "$1/XXX"
-adb pull $1/XXX
+./ZZXFacTest < ZZXFacTestIn > XXX
 sh RemoveProg ZZXFacTest
-sh AndroidRemoveProg $1/ZZXFacTest $1/ZZXFacTestIn
 if diff -b XXX ZZXFacTestOut
 then
 echo "ZZXFacTest OK"
@@ -57,45 +54,35 @@ fi
 echo
 echo "---------------------------------"
 echo "making MoreFacTest"
-make MoreFacTest
+$MAKE_PROG MoreFacTest
 echo "running MoreFacTest"
-adb push MoreFacTest $1/
-adb push MoreFacTestIn $1/
-adb shell $1/MoreFacTest "$1/MoreFacTestIn" "$1/XXX"
+./MoreFacTest < MoreFacTestIn 
 sh RemoveProg MoreFacTest
-sh AndroidRemoveProg $1/MoreFacTest $1/MoreFacTestIn
 
 echo
 echo "---------------------------------"
 echo "making GF2XTest"
-make GF2XTest
+$MAKE_PROG GF2XTest
 echo "running GF2XTest"
-adb push GF2XTest $1/
-adb shell $1/GF2XTest
+./GF2XTest
 sh RemoveProg GF2XTest
-sh AndroidRemoveProg $1/GF2XTest
 
 echo
 echo "---------------------------------"
 echo "making GF2EXTest"
-make GF2EXTest
+$MAKE_PROG GF2EXTest
 echo "running GF2EXTest"
-adb push GF2EXTest $1/
-adb shell $1/GF2EXTest
+./GF2EXTest
 sh RemoveProg GF2EXTest
-sh AndroidRemoveProg $1/GF2EXTest
+
 
 echo
 echo "---------------------------------"
 echo "making MatrixTest"
-make MatrixTest
+$MAKE_PROG MatrixTest
 echo "running MatrixTest"
-adb push MatrixTest $1/
-adb push MatrixTestIn $1/
-adb shell $1/MatrixTest "$1/MatrixTestIn" "$1/XXX"
-adb pull $1/XXX
+./MatrixTest < MatrixTestIn > XXX
 sh RemoveProg MatrixTest
-sh AndroidRemoveProg $1/MatrixTest $1/MatrixTestIn
 if diff -b XXX MatrixTestOut
 then
 echo "MatrixTest OK"
@@ -105,15 +92,20 @@ fi
 
 echo
 echo "---------------------------------"
+echo "making mat_lzz_pTest"
+$MAKE_PROG mat_lzz_pTest
+echo "running mat_lzz_pTest"
+./mat_lzz_pTest 
+sh RemoveProg mat_lzz_pTest
+
+
+echo
+echo "---------------------------------"
 echo "making CharPolyTest"
-make CharPolyTest
+$MAKE_PROG CharPolyTest
 echo "running CharPolyTest"
-adb push CharPolyTest $1/
-adb push CharPolyTestIn $1/
-adb shell $1/CharPolyTest "$1/CharPolyTestIn" "$1/XXX"
-adb pull $1/XXX
+./CharPolyTest < CharPolyTestIn > XXX
 sh RemoveProg CharPolyTest
-sh AndroidRemoveProg $1/CharPolyTest $1/CharPolyTestIn
 if diff -b XXX CharPolyTestOut
 then
 echo "CharPolyTest OK"
@@ -124,25 +116,19 @@ fi
 echo
 echo "---------------------------------"
 echo "making BitMatTest"
-make BitMatTest
+$MAKE_PROG BitMatTest
 echo "running BitMatTest"
-adb push BitMatTest $1/
-adb shell $1/BitMatTest
+./BitMatTest
 sh RemoveProg BitMatTest
-sh AndroidRemoveProg $1/BitMatTest
 
 
 echo
 echo "---------------------------------"
 echo "making RRTest"
-make RRTest
+$MAKE_PROG RRTest
 echo "running RRTest"
-adb push RRTest $1/
-adb push RRTestIn $1/
-adb shell $1/RRTest "$1/RRTestIn" "$1/XXX"
-adb pull $1/XXX
+./RRTest < RRTestIn > XXX
 sh RemoveProg RRTest
-sh AndroidRemoveProg $1/RRTest $1/RRTestIn
 if diff -b XXX RRTestOut
 then
 echo "RRTest OK"
@@ -153,14 +139,10 @@ fi
 echo
 echo "---------------------------------"
 echo "making QuadTest"
-make QuadTest
+$MAKE_PROG QuadTest
 echo "running QuadTest"
-adb push QuadTest $1/
-adb push QuadTestIn $1/
-adb shell $1/QuadTest "$1/QuadTestIn" "$1/XXX"
-adb pull $1/XXX
+./QuadTest < QuadTestIn > XXX
 sh RemoveProg QuadTest
-sh AndroidRemoveProg $1/QuadTest $1/QuadTestIn
 if diff -b XXX QuadTestOut
 then
 echo "QuadTest OK"
@@ -172,14 +154,10 @@ fi
 echo
 echo "---------------------------------"
 echo "making LLLTest"
-make LLLTest
+$MAKE_PROG LLLTest
 echo "running LLLTest"
-adb push LLLTest $1/
-adb push LLLTestIn $1/
-adb shell $1/LLLTest "$1/LLLTestIn" "$1/XXX"
-adb pull $1/XXX
+./LLLTest < LLLTestIn > XXX
 sh RemoveProg LLLTest
-sh AndroidRemoveProg $1/LLLTest $1/LLLTestIn
 if diff -b XXX LLLTestOut
 then
 echo "LLLTest OK"
@@ -190,51 +168,44 @@ fi
 echo
 echo "---------------------------------"
 echo "making subset"
-make subset
+$MAKE_PROG subset
 echo "subset 40 40 20 10 999999 f"
-adb push subset $1/
-adb shell $1/subset 40 40 20 10 999999 f
+./subset <<here
+  40 40 20 10 999999 f
+here
 echo "subset 40 40 20 10 999999 q"
-adb shell $1/subset 40 40 20 10 999999 q
+./subset <<here
+  40 40 20 10 999999 q
+here
 
 sh RemoveProg subset
-sh AndroidRemoveProg $1/subset
 
 
 echo
 echo "---------------------------------"
 echo "making ZZ_pEXTest"
-make ZZ_pEXTest
+$MAKE_PROG ZZ_pEXTest
 echo "running ZZ_pEXTest"
-adb push ZZ_pEXTest $1/
-adb shell $1/ZZ_pEXTest 
+./ZZ_pEXTest 
 sh RemoveProg ZZ_pEXTest
-sh AndroidRemoveProg $1/ZZ_pEXTest
 
 
 echo
 echo "---------------------------------"
 echo "making lzz_pEXTest"
-make lzz_pEXTest
+$MAKE_PROG lzz_pEXTest
 echo "running lzz_pEXTest"
-adb push lzz_pEXTest $1/
-adb shell $1/lzz_pEXTest 
+./lzz_pEXTest 
 sh RemoveProg lzz_pEXTest
-sh AndroidRemoveProg $1/lzz_pEXTest
-
-sh RemoveProg XXX
-sh AndroidRemoveProg $1/XXX
 
 
 echo
 echo "---------------------------------"
 echo "making ThreadTest"
-make ThreadTest
+$MAKE_PROG ThreadTest
 echo "running ThreadTest"
-adb push ThreadTest $1/
-adb shell $1/ThreadTest
+./ThreadTest 
 sh RemoveProg ThreadTest
-sh AndroidRemoveProg $1/ThreadTest
 
 echo
 

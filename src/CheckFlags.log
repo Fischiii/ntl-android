@@ -1,0 +1,4 @@
+*** CheckFlags log ***
+g++ -I../include -I.  -std=c++11 -g -O2  -o  CheckCompile CheckCompile.cpp -lm
+g++ -I../include -I.  -std=c++11 -pthread -g -O2  -o  CheckCompile CheckCompile.cpp -lm
+g++ -I../include -I.  -std=c++11 -pthread -march=native -g -O2  -o  CheckCompile CheckCompile.cpp -lm

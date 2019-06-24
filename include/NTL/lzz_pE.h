@@ -30,8 +30,11 @@ public:
 
 };
 
-NTL_THREAD_LOCAL 
-extern SmartPtr<zz_pEInfoT> zz_pEInfo; // info for current modulus, initially null
+extern 
+NTL_CHEAP_THREAD_LOCAL 
+zz_pEInfoT *zz_pEInfo; 
+// info for current modulus, initially null
+// fast TLS access
 
 
 
@@ -119,7 +122,6 @@ zz_pE() {  } // NO_ALLOC
 explicit zz_pE(long a) { *this = a;  } // NO_ALLOC
 explicit zz_pE(const zz_p& a) { *this = a;  } // NO_ALLOC
 
-zz_pE(const zz_pE& a)  {  _zz_pE__rep = a._zz_pE__rep; } // NO_ALLOC
 
 zz_pE(INIT_NO_ALLOC_TYPE) { }  // allocates no space
 zz_pE(INIT_ALLOC_TYPE) {  _zz_pE__rep.rep.SetMaxLength(zz_pE::degree()); }  // allocates space
@@ -127,7 +129,6 @@ void allocate() {  _zz_pE__rep.rep.SetMaxLength(zz_pE::degree()); }
 
 ~zz_pE() { } 
 
-zz_pE& operator=(const zz_pE& a) { _zz_pE__rep = a._zz_pE__rep; return *this; }
 
 zz_pE(zz_pE& x, INIT_TRANS_TYPE) : _zz_pE__rep(x._zz_pE__rep, INIT_TRANS) { }
 
@@ -155,6 +156,9 @@ inline zz_pE& operator=(const zz_p& a);
 
  
 };
+
+
+NTL_DECLARE_RELOCATABLE((zz_pE*))
 
 inline const zz_pX& _zz_pE__rep(const zz_pE& a) { return a._zz_pE__rep; }
 

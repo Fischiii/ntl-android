@@ -1,0 +1,347 @@
+*** CheckFeatures log ***
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetTime TestGetTime.cpp GetTime1.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 00000000000007e0
+MakeGetTime: line 16: ./TestGetTime: cannot execute binary file
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetTime TestGetTime.cpp GetTime2.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 00000000000007e0
+MakeGetTime: line 31: ./TestGetTime: cannot execute binary file
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetTime TestGetTime.cpp GetTime3.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 00000000000007e0
+MakeGetTime: line 45: ./TestGetTime: cannot execute binary file
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetTime TestGetTime.cpp GetTime4.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000cb0
+MakeGetTime: line 60: ./TestGetTime: cannot execute binary file
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetTime TestGetTime.cpp GetTime5.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000750
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a -o TestGetPID TestGetPID.cpp GetPID1.cpp -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 00000000000006d0
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckALIGNED_ARRAY.cpp -o CheckFeatures -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000600
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckBUILTIN_CLZL.cpp -o CheckFeatures -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000640
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckLL_TYPE.cpp -o CheckFeatures -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 00000000000006c0
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckSSSE3.cpp -o CheckFeatures -lm
+CheckSSSE3.cpp:8:2: error: "SSSE3 not supported"
+#error "SSSE3 not supported"
+ ^
+In file included from CheckSSSE3.cpp:21:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/tmmintrin.h:27:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/pmmintrin.h:27:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/emmintrin.h:27:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/xmmintrin.h:27:
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+    __builtin_ia32_emms();
+    ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: note: '__builtin_isless' declared here
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:25: error: too few arguments to function call, expected 2, have 0
+    __builtin_ia32_emms();
+                        ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:64:19: error: use of undeclared identifier '__builtin_ia32_vec_init_v2si'
+    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:81:12: error: use of undeclared identifier '__builtin_ia32_vec_ext_v2si'
+    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
+           ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:143:19: error: use of undeclared identifier '__builtin_ia32_packsswb'
+    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:173:19: error: use of undeclared identifier '__builtin_ia32_packssdw'
+    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:203:19: error: use of undeclared identifier '__builtin_ia32_packuswb'
+    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:230:19: error: use of undeclared identifier '__builtin_ia32_punpckhbw'
+    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:253:19: error: use of undeclared identifier '__builtin_ia32_punpckhwd'
+    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:274:19: error: use of undeclared identifier '__builtin_ia32_punpckhdq'
+    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:301:19: error: use of undeclared identifier '__builtin_ia32_punpcklbw'
+    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:324:19: error: use of undeclared identifier '__builtin_ia32_punpcklwd'
+    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:345:19: error: use of undeclared identifier '__builtin_ia32_punpckldq'
+    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:366:19: error: use of undeclared identifier '__builtin_ia32_paddb'
+    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:387:19: error: use of undeclared identifier '__builtin_ia32_paddw'
+    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:408:19: error: use of undeclared identifier '__builtin_ia32_paddd'
+    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:430:19: error: use of undeclared identifier '__builtin_ia32_paddsb'
+    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:453:19: error: use of undeclared identifier '__builtin_ia32_paddsw'
+    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckAVX.cpp -o CheckFeatures -lm
+CheckAVX.cpp:8:2: error: "AVX not supported"
+#error "AVX not supported"
+ ^
+In file included from CheckAVX.cpp:19:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/immintrin.h:28:
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+    __builtin_ia32_emms();
+    ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: note: '__builtin_isless' declared here
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:25: error: too few arguments to function call, expected 2, have 0
+    __builtin_ia32_emms();
+                        ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:64:19: error: use of undeclared identifier '__builtin_ia32_vec_init_v2si'
+    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:81:12: error: use of undeclared identifier '__builtin_ia32_vec_ext_v2si'
+    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
+           ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:143:19: error: use of undeclared identifier '__builtin_ia32_packsswb'
+    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:173:19: error: use of undeclared identifier '__builtin_ia32_packssdw'
+    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:203:19: error: use of undeclared identifier '__builtin_ia32_packuswb'
+    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:230:19: error: use of undeclared identifier '__builtin_ia32_punpckhbw'
+    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:253:19: error: use of undeclared identifier '__builtin_ia32_punpckhwd'
+    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:274:19: error: use of undeclared identifier '__builtin_ia32_punpckhdq'
+    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:301:19: error: use of undeclared identifier '__builtin_ia32_punpcklbw'
+    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:324:19: error: use of undeclared identifier '__builtin_ia32_punpcklwd'
+    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:345:19: error: use of undeclared identifier '__builtin_ia32_punpckldq'
+    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:366:19: error: use of undeclared identifier '__builtin_ia32_paddb'
+    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:387:19: error: use of undeclared identifier '__builtin_ia32_paddw'
+    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:408:19: error: use of undeclared identifier '__builtin_ia32_paddd'
+    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:430:19: error: use of undeclared identifier '__builtin_ia32_paddsb'
+    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:453:19: error: use of undeclared identifier '__builtin_ia32_paddsw'
+    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckPCLMUL.cpp -o CheckFeatures -lm
+CheckPCLMUL.cpp:7:2: error: "PCLMUL not supported"
+#error "PCLMUL not supported"
+ ^
+In file included from CheckPCLMUL.cpp:14:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/wmmintrin.h:27:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/emmintrin.h:27:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/xmmintrin.h:27:
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+    __builtin_ia32_emms();
+    ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: note: '__builtin_isless' declared here
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:25: error: too few arguments to function call, expected 2, have 0
+    __builtin_ia32_emms();
+                        ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:64:19: error: use of undeclared identifier '__builtin_ia32_vec_init_v2si'
+    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:81:12: error: use of undeclared identifier '__builtin_ia32_vec_ext_v2si'
+    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
+           ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:143:19: error: use of undeclared identifier '__builtin_ia32_packsswb'
+    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:173:19: error: use of undeclared identifier '__builtin_ia32_packssdw'
+    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:203:19: error: use of undeclared identifier '__builtin_ia32_packuswb'
+    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:230:19: error: use of undeclared identifier '__builtin_ia32_punpckhbw'
+    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:253:19: error: use of undeclared identifier '__builtin_ia32_punpckhwd'
+    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:274:19: error: use of undeclared identifier '__builtin_ia32_punpckhdq'
+    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:301:19: error: use of undeclared identifier '__builtin_ia32_punpcklbw'
+    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:324:19: error: use of undeclared identifier '__builtin_ia32_punpcklwd'
+    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:345:19: error: use of undeclared identifier '__builtin_ia32_punpckldq'
+    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:366:19: error: use of undeclared identifier '__builtin_ia32_paddb'
+    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:387:19: error: use of undeclared identifier '__builtin_ia32_paddw'
+    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:408:19: error: use of undeclared identifier '__builtin_ia32_paddd'
+    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:430:19: error: use of undeclared identifier '__builtin_ia32_paddsb'
+    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:453:19: error: use of undeclared identifier '__builtin_ia32_paddsw'
+    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckAVX2.cpp -o CheckFeatures -lm
+CheckAVX2.cpp:8:2: error: "AVX2 not supported"
+#error "AVX2 not supported"
+ ^
+In file included from CheckAVX2.cpp:20:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/immintrin.h:28:
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+    __builtin_ia32_emms();
+    ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: note: '__builtin_isless' declared here
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:25: error: too few arguments to function call, expected 2, have 0
+    __builtin_ia32_emms();
+                        ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:64:19: error: use of undeclared identifier '__builtin_ia32_vec_init_v2si'
+    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:81:12: error: use of undeclared identifier '__builtin_ia32_vec_ext_v2si'
+    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
+           ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:143:19: error: use of undeclared identifier '__builtin_ia32_packsswb'
+    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:173:19: error: use of undeclared identifier '__builtin_ia32_packssdw'
+    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:203:19: error: use of undeclared identifier '__builtin_ia32_packuswb'
+    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:230:19: error: use of undeclared identifier '__builtin_ia32_punpckhbw'
+    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:253:19: error: use of undeclared identifier '__builtin_ia32_punpckhwd'
+    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:274:19: error: use of undeclared identifier '__builtin_ia32_punpckhdq'
+    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:301:19: error: use of undeclared identifier '__builtin_ia32_punpcklbw'
+    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:324:19: error: use of undeclared identifier '__builtin_ia32_punpcklwd'
+    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:345:19: error: use of undeclared identifier '__builtin_ia32_punpckldq'
+    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:366:19: error: use of undeclared identifier '__builtin_ia32_paddb'
+    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:387:19: error: use of undeclared identifier '__builtin_ia32_paddw'
+    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:408:19: error: use of undeclared identifier '__builtin_ia32_paddd'
+    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:430:19: error: use of undeclared identifier '__builtin_ia32_paddsb'
+    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:453:19: error: use of undeclared identifier '__builtin_ia32_paddsw'
+    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckFMA.cpp -o CheckFeatures -lm
+In file included from CheckFMA.cpp:5:
+In file included from /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/immintrin.h:28:
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+    __builtin_ia32_emms();
+    ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:5: note: '__builtin_isless' declared here
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:47:25: error: too few arguments to function call, expected 2, have 0
+    __builtin_ia32_emms();
+                        ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:64:19: error: use of undeclared identifier '__builtin_ia32_vec_init_v2si'
+    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:81:12: error: use of undeclared identifier '__builtin_ia32_vec_ext_v2si'
+    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
+           ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:143:19: error: use of undeclared identifier '__builtin_ia32_packsswb'
+    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:173:19: error: use of undeclared identifier '__builtin_ia32_packssdw'
+    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:203:19: error: use of undeclared identifier '__builtin_ia32_packuswb'
+    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:230:19: error: use of undeclared identifier '__builtin_ia32_punpckhbw'
+    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:253:19: error: use of undeclared identifier '__builtin_ia32_punpckhwd'
+    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:274:19: error: use of undeclared identifier '__builtin_ia32_punpckhdq'
+    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:301:19: error: use of undeclared identifier '__builtin_ia32_punpcklbw'
+    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:324:19: error: use of undeclared identifier '__builtin_ia32_punpcklwd'
+    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:345:19: error: use of undeclared identifier '__builtin_ia32_punpckldq'
+    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:366:19: error: use of undeclared identifier '__builtin_ia32_paddb'
+    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:387:19: error: use of undeclared identifier '__builtin_ia32_paddw'
+    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:408:19: error: use of undeclared identifier '__builtin_ia32_paddd'
+    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:430:19: error: use of undeclared identifier '__builtin_ia32_paddsb'
+    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:453:19: error: use of undeclared identifier '__builtin_ia32_paddsw'
+    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
+                  ^
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/bin/build/toolchains/aarch64-linux-android/lib64/clang/7.0.2/include/mmintrin.h:475:19: error: use of undeclared identifier '__builtin_ia32_paddusb'
+    return (__m64)__builtin_ia32_paddusb((__v8qi)__m1, (__v8qi)__m2);
+                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckCOPY_TRAITS1.cpp -o CheckFeatures -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000600
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/aarch64-linux-android-clang++ --sysroot=/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/sysroot -I/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/include/c++/4.9.x -I../include -I. -Bdynamic -Wl,-dead_strip -Wl,-z,nocopyreloc -pie -g -O2 -fno-rtti -DANDROID -fvisibility=hidden -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-m,aarch64linux /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_static.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++abi.a /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib/libc++_shared.so /Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/aarch64-linux-android/lib64/libatomic.a CheckCOPY_TRAITS2.cpp -o CheckFeatures -lm
+/Users/afischer/workspace/letsdev-git/ld/3rdparty/ntl-android/src/../bin/build/toolchains/aarch64-linux-android/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld: warning: cannot find entry symbol ad_strip; defaulting to 0000000000000600

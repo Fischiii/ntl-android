@@ -50,7 +50,7 @@ public:
    LazyTable();
 
 
-   const T * const  operator[] (long i) const;
+   const T * operator[] (long i) const;
 
    ~LazyTable();
 
@@ -98,7 +98,7 @@ private:
 public:
    LazyTable() : len(0) { }
 
-   const T * const operator[] (long i) const 
+   const T * operator[] (long i) const 
    { 
       // FIXME: add optional range checking
 
@@ -148,6 +148,9 @@ public:
       long amt() const { return amount; }
    };
 };
+
+
+// NOTE: LazyTable's are non-relocatable
 
 
 NTL_CLOSE_NNS

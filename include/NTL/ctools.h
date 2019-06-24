@@ -4,12 +4,42 @@
 
 #include <NTL/config.h>
 #include <NTL/mach_desc.h>
-#include <NTL/have_LL.h>
-#include <NTL/have_builtin_clzl.h>
+
+#include <NTL/ALL_FEATURES.h>
+
+
+// defines the working C++ standard
+
+#if defined(NTL_STD_CXX11)
+#define NTL_CXX_STANDARD (2011)
+#elif defined(NTL_STD_CXX14)
+#define NTL_CXX_STANDARD (2014)
+#else
+#define NTL_CXX_STANDARD (1998)
+#endif
+
+// define some macros regarding noexcept declarations
+
+#if (NTL_CXX_STANDARD >= 2011)
+
+#define NTL_NOEXCEPT noexcept
+
+#ifdef NTL_EXCEPTIONS
+#define NTL_FAKE_NOEXCEPT
+#else
+#define NTL_FAKE_NOEXCEPT noexcept
+#endif
+
+#else
+
+#define NTL_NOEXCEPT 
+#define NTL_FAKE_NOEXCEPT
+
+#endif
 
 
 /*
- * Resolve double-word integer types.
+ * Resolve double-word integer type.
  *
  * Unfortunately, there is no "standard" way to do this.
  * On 32-bit machines, 'long long' usually works (but not
@@ -18,35 +48,10 @@
  * non-standard double-word type.  
  *
  * Note that C99 creates a standard header <stdint.h>,
- * but it is not clear how widely this is implemented yet,
- * and for example, GCC does not provide a type int128_t 
+ * but it is not clear how widely this is implemented,
+ * and for example, older versions of GCC does not provide a type int128_t 
  * in <stdint.h> on 64-bit machines.
  */
-
-
-#if (defined(NTL_LONG_LONG_TYPE))
-
-#define NTL_LL_TYPE NTL_LONG_LONG_TYPE
-
-#elif (NTL_BITS_PER_LONG == 64 && defined(__GNUC__))
-
-#define NTL_LL_TYPE __int128_t
-
-#elif (NTL_BITS_PER_LONG == 32 && (defined(_MSC_VER) || defined(__BORLANDC__)))
-
-#define NTL_LL_TYPE __int64
-
-#elif (NTL_BITS_PER_LONG == 64 && (defined(_MSC_VER) || defined(__BORLANDC__)))
-
-#define NTL_LL_TYPE __int128
-
-#endif
-
-#if (!defined(NTL_LL_TYPE))
-
-#define NTL_LL_TYPE long long
-
-#endif
 
 
 
@@ -56,7 +61,7 @@
 
 #elif (NTL_BITS_PER_LONG == 64 && defined(__GNUC__))
 
-#define NTL_ULL_TYPE __uint128_t
+#define NTL_ULL_TYPE __uint128_t 
 
 #elif (NTL_BITS_PER_LONG == 32 && (defined(_MSC_VER) || defined(__BORLANDC__)))
 
@@ -71,6 +76,23 @@
 #if (!defined(NTL_ULL_TYPE))
 
 #define NTL_ULL_TYPE unsigned long long
+
+#endif
+
+
+#ifdef NTL_HAVE_LL_TYPE
+
+typedef NTL_ULL_TYPE _ntl_ulonglong;
+// typenames are more convenient than macros
+
+#else
+
+#undef NTL_ULL_TYPE
+// prevent any use of these macros
+
+class _ntl_ulonglong { private: _ntl_ulonglong() { } };
+// cannot create variables of these types
+
 
 #endif
 
@@ -89,7 +111,7 @@ typedef unsigned int _ntl_uint32; // 32-bit word
 
 #else
 
-// NOTE: C++ standard guarntees longs ar at least 32-bits wide,
+// NOTE: C++ standard guarantees longs are at least 32-bits wide,
 // and this is also explicitly checked at builod time
 
 typedef unsigned long _ntl_uint32; // 32-bit word
@@ -303,9 +325,16 @@ extern unsigned long exception_counter;
 
 #define NTL_THREAD_LOCAL thread_local 
 
+#ifdef __GNUC__
+#define NTL_CHEAP_THREAD_LOCAL __thread
+#else
+#define NTL_CHEAP_THREAD_LOCAL thread_local
+#endif
+
 #else
 
 #define NTL_THREAD_LOCAL 
+#define NTL_CHEAP_THREAD_LOCAL 
 
 #endif
 
@@ -363,7 +392,207 @@ void _ntl_swap(T*& a, T*& b)
    as the C++ standard is kind of broken on the issue of where
    swap is defined. And I also only want it defined for built-in types.
  */
+
+
+// The following do for "move" what the above does for swap
+
+#define NTL_DEFINE_SCALAR_MOVE(T)\
+inline T _ntl_scalar_move(T& a)\
+{\
+   T t = a; a = 0; return t;\
+}
+
+NTL_DEFINE_SCALAR_MOVE(long)
+NTL_DEFINE_SCALAR_MOVE(int)
+NTL_DEFINE_SCALAR_MOVE(short)
+NTL_DEFINE_SCALAR_MOVE(char)
+
+NTL_DEFINE_SCALAR_MOVE(unsigned long)
+NTL_DEFINE_SCALAR_MOVE(unsigned int)
+NTL_DEFINE_SCALAR_MOVE(unsigned short)
+NTL_DEFINE_SCALAR_MOVE(unsigned char)
+
+NTL_DEFINE_SCALAR_MOVE(double)
+NTL_DEFINE_SCALAR_MOVE(float)
+
    
+template<class T>
+T* _ntl_scalar_move(T*& a)
+{
+   T *t = a; a = 0; return t;
+}
+
+
+
+
+
+// The following routine increments a pointer so that
+// it is properly aligned.  
+// It is assumed that align > 0.
+// If align is a constant power of 2, it compiles
+// into a small handful of simple instructions.
+
+#if (NTL_BIG_POINTERS)
+
+#define NTL_UPTRINT_T unsigned long long
+// DIRT: this should really be std::uintptr_t, defined
+// in <cstdint>; however, that header is not widely available,
+// and even if it were, std::uintptr_t is not guaranteed
+// to be defined.  Of course, unsigned long long may not
+// be defined in pre-C++11.  
+
+#else
+
+#define NTL_UPTRINT_T unsigned long 
 
 #endif
 
+
+#ifdef NTL_HAVE_ALIGNED_ARRAY
+
+inline
+char *_ntl_make_aligned(char *p, long align)
+{
+   unsigned long r =  (unsigned long) (((NTL_UPTRINT_T) (p)) % ((NTL_UPTRINT_T) (align)));
+   return p + ((((unsigned long) (align)) - r) % ((unsigned long) (align)));
+}
+
+#else
+
+
+inline
+char *_ntl_make_aligned(char *p, long align)
+{
+   return p;
+}
+
+
+#endif
+
+
+
+
+
+// The following is for aligning small local arrays
+// Equivalent to type x[n], but aligns to align bytes
+// Only works for POD types
+// NOTE: the gcc aligned attribute might work, but there is
+// some chatter on the web that this was (at some point) buggy.
+// Not clear what the current status is.
+// Anyway, this is only intended for use with gcc on intel
+// machines, so it should be OK.
+
+
+#define NTL_ALIGNED_LOCAL_ARRAY(align, x, type, n) \
+   char x##__ntl_hidden_variable_storage[n*sizeof(type)+align]; \
+   type *x = (type *) _ntl_make_aligned(&x##__ntl_hidden_variable_storage[0], align);
+
+
+#define NTL_AVX_BYTE_ALIGN (32)
+#define NTL_AVX_DBL_ALIGN (NTL_AVX_BYTE_ALIGN/long(sizeof(double)))
+
+#define NTL_AVX_LOCAL_ARRAY(x, type, n) NTL_ALIGNED_LOCAL_ARRAY(NTL_AVX_BYTE_ALIGN, x, type, n)
+
+#define NTL_DEFAULT_ALIGN (64)
+// this should be big enough to satisfy any SIMD instructions,
+// and it should also be as big as a cache line
+
+
+
+#ifdef NTL_HAVE_BUILTIN_CLZL
+
+inline long 
+_ntl_count_bits(unsigned long x)
+{
+   return x ? (NTL_BITS_PER_LONG - __builtin_clzl(x)) : 0;
+}
+
+#else
+
+inline long 
+_ntl_count_bits(unsigned long x)
+{
+   if (!x) return 0;
+
+   long res = NTL_BITS_PER_LONG;
+   while (x < (1UL << (NTL_BITS_PER_LONG-1))) {
+      x <<= 1;
+      res--;
+   }
+
+   return res;
+}
+
+#endif
+
+
+
+
+#if (!defined(NTL_CLEAN_INT) && NTL_ARITH_RIGHT_SHIFT && (NTL_BITS_PER_LONG == (1 << (NTL_NUMBITS_BPL-1))))
+
+
+
+inline void
+_ntl_bpl_divrem(long a, long& q, long& r)
+{
+   q = a >> (NTL_NUMBITS_BPL-1);
+   r = a & (NTL_BITS_PER_LONG-1);
+}
+
+#else
+
+inline void
+_ntl_bpl_divrem(long a, long& q, long& r)
+{
+   q = a / NTL_BITS_PER_LONG;
+   r = a % NTL_BITS_PER_LONG;
+   if (r < 0) {
+      q--;
+      r += NTL_BITS_PER_LONG;
+   }
+}
+
+#endif
+
+inline void
+_ntl_bpl_divrem(unsigned long a, long& q, long& r)
+{
+   q = a / NTL_BITS_PER_LONG;
+   r = a % NTL_BITS_PER_LONG;
+}
+
+
+
+template <class T>
+struct _ntl_is_char_pointer
+{
+ enum {value = false};
+};
+
+template <>
+struct _ntl_is_char_pointer<char*>
+{
+ enum {value = true};
+};
+
+template <>
+struct _ntl_is_char_pointer<const char*>
+{
+ enum {value = true};
+};
+
+template <bool, typename T = void>
+struct _ntl_enable_if
+{};
+
+template <typename T>
+struct _ntl_enable_if<true, T> {
+  typedef T type;
+};
+
+
+
+
+
+
+#endif
