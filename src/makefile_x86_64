@@ -25,7 +25,7 @@ CXX=$(TOOLCHAIN_DIR)/bin/$(TOOLCHAIN_PREFIX_CLANG)29-clang++ --sysroot=$(TOOLCHA
 # A C++ compiler, e.g., g++, CC, xlC
 
 
-CXXFLAGS=-g -O2
+CXXFLAGS=-g -O2 -fPIC
 # Flags for the C++ compiler
 
 CXXAUTOFLAGS=-std=c++11 -pthread
@@ -83,7 +83,7 @@ DESTDIR=
 ###############################################################
 
 
-GMP_PREFIX=/Users/afischer/workspace/letsdev-git/ld/analytics/ld-framework-analytics-shared/lib/android/gmp/${TARGET_ARCH_ABI}
+GMP_PREFIX=/Users/afischer/workspace/letsdev-git/ld/3rdparty/PALISADE/third-party/gmp/${TARGET_ARCH_ABI}
 
 GMP_INCDIR=$(GMP_PREFIX)/include
 
@@ -309,7 +309,7 @@ else
     TARGET_LDFLAGS = -Wl,-dynamic-linker,/system/bin/linker64 -Wl,--no-undefined -Wl,-z,noexecstack
 endif
 # TODO libatomic always this path? Possibly has to change for other toolchains.
-TARGET_LDLIBS += $(TOOLCHAIN_SYSROOT)/usr/lib/$(TOOLCHAIN_PREFIX)/libc++_static.a $(TOOLCHAIN_SYSROOT)/usr/lib/$(TOOLCHAIN_PREFIX)/libc++abi.a $(TOOLCHAIN_SYSROOT)/usr/lib/$(TOOLCHAIN_PREFIX)/libc++_shared.so $(TOOLCHAIN_DIR)/$(TOOLCHAIN_PREFIX)/lib64/libatomic.a
+TARGET_LDLIBS += $(TOOLCHAIN_SYSROOT)/usr/lib/$(TOOLCHAIN_PREFIX)/libc++abi.a $(TOOLCHAIN_SYSROOT)/usr/lib/$(TOOLCHAIN_PREFIX)/libc++_shared.so $(TOOLCHAIN_DIR)/$(TOOLCHAIN_PREFIX)/lib64/libatomic.a
 
 CFLAGS += $(CXXFLAGS) -fno-rtti -DANDROID -fvisibility=hidden
 

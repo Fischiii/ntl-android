@@ -22,7 +22,7 @@ do
    then
     adb shell mkdir -p $PHONE_TMP_DIR
     adb push CheckFeatures $PHONE_TMP_DIR/CheckFeatures
-    # adb push $TOOLCHAIN_DIR/sysroot/usr/lib/$TOOLCHAIN_PREFIX/libc++_shared.so $PHONE_TMP_DIR
+    adb push $TOOLCHAIN_DIR/sysroot/usr/lib/$TOOLCHAIN_PREFIX/libc++_shared.so $PHONE_TMP_DIR
     #adb push $GMP_LIBDIR/libgmp.so $PHONE_TMP_DIR
     CHECK_RESULT=$(adb shell "export LD_LIBRARY_PATH=$PHONE_TMP_DIR && cd $PHONE_TMP_DIR && $PHONE_TMP_DIR/CheckFeatures")
       if $CHECK_RESULT
